@@ -31,4 +31,7 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - say-hello:
+          filters:  # required since `deploy` has tag filters AND requires `build`
+            tags:
+              only: /.*/
