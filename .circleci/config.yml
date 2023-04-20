@@ -17,6 +17,14 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: "GitHub-BB Parameters"
+          command: |
+            echo "pipeline.project.git_url: << pipeline.project.git_url >>"
+            echo "pipeline.git.tag: << pipeline.git.tag >>"
+            echo "pipeline.git.branch: << pipeline.git.branch >>"
+            echo "pipeline.schedule.name: << pipeline.schedule.name >>"
+
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
