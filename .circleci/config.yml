@@ -24,7 +24,7 @@ jobs:
             echo "pipeline.git.tag: << pipeline.git.tag >>"
             echo "pipeline.git.branch: << pipeline.git.branch >>"
             echo "pipeline.schedule.name: << pipeline.schedule.name >>"
-       - run:
+      - run:
           name: "Print Secret"
           command: |
             echo $AWS_KEY
